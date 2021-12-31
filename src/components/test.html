@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin-top: 50px;
+    /* border:3px solid blue; */
+}
+header h1 img,
+header h1 a{
+    width:200px;
+    display: block;
+    margin: 0 auto;
+}
+header .gnb{
+    padding:25px;
+    margin-top: 40px;
+    text-align: center;
+    /* outline: 3px solid yellow; */
+
+}
+header .gnb li{
+    font-size: 18px;
+    list-style: none;
+    display: inline-block;
+}
+header .gnb li a{
+    color:black;
+    text-decoration: none;
+    padding:10px 25px;
+    margin:0 30px;
+    letter-spacing: 0.07em;
+}
+header .gnb li:last-child a{
+    color: #fff;
+    padding:15px 50px;
+    font-weight: bold;
+    background-color: blue;
+    border-radius: 50px;
+}
+header .gnb li:last-child a:hover{
+    background-color: black;
+}
+header .sign{
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
+header .sign li{
+    font-size: 13px;
+    list-style: none;
+    display: inline-block;
+}
+header .sign li a{
+    color:black; 
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+#container .main_slide img{
+    display: block;
+    width:100%;
+    overflow: hidden;
+}
+.over_hidden{
+    width:350px;
+    height:350px;
+    overflow: hidden;
+    margin-top: 5%;
+    margin-left: 55%;
+}
+.phone_imgs{
+    width: 1400px;
+    float: left;
+    transition: transform 0.5s;
+}
+.phone_img_wrap {
+    width:350px;
+    overflow: hidden;
+    float: left;
+}
+.phone_imgs img {
+    width:350px;
+    float: left;
+}
+
+.phone_text{
+    width:500px;
+    float: left;
+    margin: 120px 0 0 200px;
+}
+.phone_text p{
+    font-size: 13px;
+    color:rgb(92, 92, 92);
+}
+.phone_text .big_txt{
+    font-size: 30px;
+    font-weight: bold;
+}
+.color_group{
+    margin-top: 15px;
+    margin-left: 59%;
+}
+.color{
+    margin:0 10px;
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 30px;
+    border:5px solid #fff;
+    outline: 1px solid #CCC ;
+}
+.color:hover{
+    outline: 3px solid #ccc;
+}
+.color:last-child{
+    margin-left:5px;
+}
+.yellow{
+    background-color: #E3DECA;
+}
+.green{
+    background-color: #303D3C;
+}
+.purple{
+    background-color: #BFB1D2;
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="main_slide">
+            <img src="imgs/main_img03.jpg"></img>
+        </div>
+        <div class="phone_text">
+            <h1>갤럭시 Z 플립3 5G</h1>
+            <p>SM-F711NLVWKOO</p>
+            <span>판매가</span>
+            <span class="big_txt">1,254,000</span>
+            <span>원</span>
+        </div>
+        
+        <div class="over_hidden">
+        
+                <div class="phone_imgs">
+                    <div class="phone_img_wrap"><img src="../../public/imgs/phone_black.jpeg" alt="phoneimg"></img></div>
+                    <div class="phone_img_wrap"><img src="../../public/imgs/phone_yellow.jpeg" alt="phoneimg"></img></div>
+                    <div class="phone_img_wrap"><img src="../../public/imgs/phone_green.jpeg" alt="phoneimg"></img></div>
+                    <div class="phone_img_wrap"><img src="../../public/imgs/phone_purple.jpeg" alt="phoneimg"></img></div>
+                </div>
+       
+        </div>
+        <div class="color_group">
+            <div class="color black"></div>
+            <div class="color yellow"></div>
+            <div class="color green"></div>
+            <div class="color purple"></div>
+        </div>
+        
+    </div>
+    <script>
+        console.log('Container 렌더링');
+        var phoneImg=document.querySelector('.phone_imgs');
+        document.querySelector('.black').addEventListener('click',()=>{
+            phoneImg.style.transform="translate(0px)";
+        })
+        document.querySelector('.yellow').addEventListener('click',()=>{
+            phoneImg.style.transform='translate(-350px)';
+        });
+        document.querySelector('.green').addEventListener('click',()=>{
+            phoneImg.style.transform='translate(-700px)';
+        });
+        document.querySelector('.purple').addEventListener('click',()=>{
+            phoneImg.style.transform='translate(-1050px)';
+        });
+    </script>
+</body>
+</html>
