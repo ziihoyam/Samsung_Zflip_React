@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin-top: 50px;
+    /* border:3px solid blue; */
+}
+header h1 img,
+header h1 a{
+    width:200px;
+    display: block;
+    margin: 0 auto;
+}
+header .gnb{
+    padding:25px;
+    margin-top: 40px;
+    text-align: center;
+    /* outline: 3px solid yellow; */
+
+}
+header .gnb li{
+    font-size: 18px;
+    list-style: none;
+    display: inline-block;
+}
+header .gnb li a{
+    color:black;
+    text-decoration: none;
+    padding:10px 10px;
+    margin:0 30px;
+    letter-spacing: 0.07em;
+}
+header .gnb li:last-child a{
+    color: #fff;
+    padding:15px 50px;
+    font-weight: bold;
+    background-color: blue;
+    border-radius: 50px;
+}
+header .gnb li:last-child a:hover{
+    background-color: black;
+}
+header .sign{
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
+header .sign li{
+    font-size: 13px;
+    list-style: none;
+    display: inline-block;
+}
+header .sign li a{
+    color:black; 
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+#container .main_slide img{
+    display: block;
+    width:100%;
+    overflow: hidden;
+}
+.phone_over_hidden{
+    /* outline: 2px solid blueviolet; */
+    width:350px;
+    overflow: hidden;
+    margin-top: 5%;
+    float: right;
+    margin-right: 265px;
+}
+.phone_imgs{
+    width: 1400px;
+    float: left;
+    transition: transform 0.5s;
+}
+.phone_img_wrap {
+    width:350px;
+    overflow: hidden;
+    float: left;
+}
+.phone_imgs img {
+    width:100%;
+    float: left;
+}
+
+.phone_left{
+    float: left;
+    margin-top: 100px;
+    margin-left: 265px;
+    box-sizing: border-box;
+}
+.phone_left p{
+    font-size: 13px;
+    color:rgb(92, 92, 92);
+}
+.phone_left .big_txt{
+    font-size: 40px;
+    font-weight: bold;
+}
+.phone_left .plus_group{
+    margin-top: 80px;
+    margin-left: 10px;
+}
+.phone_left .plus_group button{
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    background-color: rgb(236, 236, 236);
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.phone_left .plus_group span{
+    font-size: 20px;
+    padding:0 10px;
+}
+.phone_left .pay_button {
+    margin-top: 40px;
+}
+.phone_left .pay_button button{
+    cursor: pointer;
+    width:210px;
+    padding:15px 0;
+    color: #fff;
+    padding:15px 50px;
+    background-color: blue;
+    border: 0;
+    border-radius: 50px;
+    font-size: 17px;
+    margin-right: 10px;
+}
+.phone_left .result{
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+.phone_right{
+    float: right;
+    width: 50%;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+.color_group{
+    width:350px;
+    margin-top: 2%;
+    float: right;
+    margin-right: 200px;
+}
+.color{
+    margin:0 10px;
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 30px;
+    border:5px solid #fff;
+    outline: 1px solid #CCC ;
+}
+.color:hover{
+    outline: 3px solid #ccc;
+}
+.color:last-child{
+    margin-left:5px;
+}
+.yellow{
+    background-color: #E3DECA;
+}
+.green{
+    background-color: #303D3C;
+}
+.purple{
+    background-color: #eeebf2;
+}
+.contents2{
+    margin-top: 500px;
+    outline: 2px solid pink;
+    display: block;
+    height: 1000px;
+    /* background: url(https://images.samsung.com/sec/smartphones/galaxy-z-flip3-5g/images/galaxy-z-flip3-5g_highlights_experience.jpg) center;
+    background-size: cover; */
+}
+
+ /* 푸터 */
+.footer{
+    background-color: rgb(211, 211, 211);
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    clear: both;
+}
+#footer_logo{
+    text-align: center;
+}
+#footer_logo img:nth-child(1){
+   padding:0 10px;
+}
+#footer_logo span{
+    position:relative;
+    bottom:10px;
+    font-weight: lighter;
+}
+.company{
+    margin-top: 20px;
+    text-align: center;
+}
+.company li{
+    display: inline-block;
+    padding:5px 10px;
+    color:#5c5c5c;
+    font-size: 13px;
+}
