@@ -7,7 +7,7 @@ import './components.css';
 class Container extends Component{
   constructor(props){
     super(props);
-    this.state = {
+    this.state = { 
       count: 1,
       payResult : 1254000
     };
