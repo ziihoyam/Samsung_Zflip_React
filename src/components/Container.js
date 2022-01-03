@@ -2,7 +2,7 @@
 import { Component } from "react";
 import './components.css';
 // import React, { useState } from "react";
-
+import { BrowserRouter,Route, Link, Switch } from "react-router-dom";
 
 class Container extends Component{
   constructor(props){
@@ -91,11 +91,71 @@ class Container extends Component{
                     </div>
                 </div>
                 <div className="contents2">
-                    
+                    <BrowserRouter>
+                    <Contents2/>
+                    </BrowserRouter>
                 </div>
 
             </div>
         )
     };
+}
+function Contents2(){
+ return(
+     <div>
+         <div className="spec_left_group">
+            <ul className="spec_left_txt">
+                <li><Link to="/">초고속 5G</Link></li>
+                <li><Link to="/battery">듀얼 배터리</Link></li>
+                <li><Link to="/saveArea">저장공간</Link></li>
+                <li><Link to="/ap">AP</Link></li> 
+            </ul>
+            <div className="spec_left_img_group">
+                <Route exact path="/">
+                    <div className="spec_left_img">
+                        <h2>덜 기다리고, 더 빨리 연결되는</h2>
+                        <p>방금 업데이트된 드라마를 보고 지금 벌어진 일을 업로드하는데 왜 기다림이 필요하죠? 초고속 5G로 사진과 동영상을 빠르게 공유하는 즐거움을 누리세요.</p>
+                        <img src="imgs/cont2_1.jpeg"></img>
+                    </div>
+                </Route>
+                <Route path="/battery">
+                    <div className="spec_left_img">
+                        <h2>오래도록 파워풀한 배터리</h2>
+                        <p>인텔리전트 듀얼 배터리 3,300 mAh 대용량 배터리를 경험해보세요.23,24 당신의 사용 습관에 맞춰 전력을 조절해주어 더 오래 사용할 수 있습니다.</p>
+                        <img src="imgs/cont2_2.jpeg"></img>
+                    </div>
+                </Route>
+                <Route path="/saveArea">
+                    <div className="spec_left_img">
+                        <h2>계속 모아 두세요</h2>
+                        <p>폰으로 찍은 사진과 동영상은 폰으로 간직하세요. 최대 256 GB 저장 용량으로, 갤럭시 안의 공간은 충분합니다.</p>
+                        <img src="imgs/cont2_3.jpeg"></img>
+                    </div>
+                </Route>
+                <Route path="/ap">
+                    <div className="spec_left_img">
+                        <h2>갤럭시 Z 사상 가장 빠른 칩으로</h2>
+                        <p>GPU, CPU 그리고 NPU로 업그레이드된 5 nm 프로세서를 탑재했습니다. 그리고 8 GB RAM까지 더해, 만족스러운 속도의 게임 퍼포먼스를 경험할 수 있죠.</p>
+                        <img src="imgs/cont2_4.jpeg"></img>
+                    </div>
+                </Route>
+            </div>
+        </div>
+        {/* <div className="spec_right_group">
+            <ul className="spec_right">
+                <li><Link to="/">지문인식</Link></li>
+                <li><Link to="/factory">실험실</Link></li>
+                <li><Link to="/knox">SAMSUNG KNOX</Link></li>
+                <li><Link to="/dragdrop">Drag Drop</Link></li>
+            </ul>
+            <div className="spec_right_img_group">
+                <Route path="/"><div className="spec_right_img"><img src="imgs/cont2_5.jpeg"></img></div></Route>
+                <Route path="/factory"><div className="spec_right_img"><img src="imgs/cont2_6.jpeg"></img></div></Route>
+                <Route path="/knox"><div className="spec_right_img"><img src="imgs/cont2_7.jpeg"></img></div></Route>
+                <Route path="/dragdrop"><div className="spec_right_img"><img src="imgs/cont2_8.jpeg"></img></div></Route>
+            </div>
+        </div> */}
+     </div>
+ );
 }
 export default Container;
