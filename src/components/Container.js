@@ -2,7 +2,7 @@
 import { Component } from "react";
 import './components.css';
 // import React, { useState } from "react";
-import { BrowserRouter,Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter,Route, NavLink } from "react-router-dom";
 
 class Container extends Component{
   constructor(props){
@@ -42,14 +42,14 @@ class Container extends Component{
                 </div>
                 <div className="contents1">
                     <div className="phone_left">
-                        <h1 className="big_txt">갤럭시 Z 플립3 5G</h1>
+                        <h2 className="big_txt">갤럭시 Z 플립3 5G</h2>
                         <p>SM-F711NLVWKOO</p>
                         <div className="plus_group">
                             <button className="minus_btn" onClick={()=>{
                                 if(count>1){
                                     this.setState({count : count-1, payResult : payResult-1254000})
                                 }
-                                else if(count==0 || count==1){
+                                else if(count===0 || count===1){
                                     alert('최소 수량은 1개 입니다.');
                                     console.log('이벤트 실행');
                                     this.setState({count : 1, payResult : 1254000});
@@ -90,7 +90,9 @@ class Container extends Component{
                         </div>
                     </div>
                 </div>
+                <VideoModal/>
                 <div className="contents2">
+                    
                     <BrowserRouter>
                     <Contents2/>
                     </BrowserRouter>
@@ -100,61 +102,68 @@ class Container extends Component{
         )
     };
 }
+function VideoModal(){
+    return(
+        <div className="youtube_area">
+            <iframe width="1000" height="562" src="https://www.youtube.com/embed/w8SBlIAorH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    );
+}
+function Modal(){
+    return(
+        <div className="modal">
+            <button className="modal_button">Open modal</button>
+        </div>
+    );
+}
+
 function Contents2(){
  return(
-     <div>
+     <div className="spec_group">
          <div className="spec_left_group">
-            <ul className="spec_left_txt">
-                <li><Link to="/">초고속 5G</Link></li>
-                <li><Link to="/battery">듀얼 배터리</Link></li>
-                <li><Link to="/saveArea">저장공간</Link></li>
-                <li><Link to="/ap">AP</Link></li> 
-            </ul>
+            
             <div className="spec_left_img_group">
                 <Route exact path="/">
                     <div className="spec_left_img">
                         <h2>덜 기다리고, 더 빨리 연결되는</h2>
                         <p>방금 업데이트된 드라마를 보고 지금 벌어진 일을 업로드하는데 왜 기다림이 필요하죠? 초고속 5G로 사진과 동영상을 빠르게 공유하는 즐거움을 누리세요.</p>
-                        <img src="imgs/cont2_1.jpeg"></img>
+                        <img src="imgs/cont2_1.jpeg" alt="route1"></img>
                     </div>
                 </Route>
                 <Route path="/battery">
                     <div className="spec_left_img">
                         <h2>오래도록 파워풀한 배터리</h2>
                         <p>인텔리전트 듀얼 배터리 3,300 mAh 대용량 배터리를 경험해보세요.23,24 당신의 사용 습관에 맞춰 전력을 조절해주어 더 오래 사용할 수 있습니다.</p>
-                        <img src="imgs/cont2_2.jpeg"></img>
+                        <img src="imgs/cont2_2.jpeg" alt="route2"></img>
                     </div>
                 </Route>
                 <Route path="/saveArea">
                     <div className="spec_left_img">
                         <h2>계속 모아 두세요</h2>
                         <p>폰으로 찍은 사진과 동영상은 폰으로 간직하세요. 최대 256 GB 저장 용량으로, 갤럭시 안의 공간은 충분합니다.</p>
-                        <img src="imgs/cont2_3.jpeg"></img>
+                        <img src="imgs/cont2_3.jpeg" alt="route3"></img>
                     </div>
                 </Route>
                 <Route path="/ap">
                     <div className="spec_left_img">
-                        <h2>갤럭시 Z 사상 가장 빠른 칩으로</h2>
+                        <h2>갤럭시 Z 사상<br/>가장 빠른 칩으로</h2>
                         <p>GPU, CPU 그리고 NPU로 업그레이드된 5 nm 프로세서를 탑재했습니다. 그리고 8 GB RAM까지 더해, 만족스러운 속도의 게임 퍼포먼스를 경험할 수 있죠.</p>
-                        <img src="imgs/cont2_4.jpeg"></img>
+                        <img src="imgs/cont2_4.jpeg" alt="route4"></img>
                     </div>
                 </Route>
             </div>
-        </div>
-        {/* <div className="spec_right_group">
-            <ul className="spec_right">
-                <li><Link to="/">지문인식</Link></li>
-                <li><Link to="/factory">실험실</Link></li>
-                <li><Link to="/knox">SAMSUNG KNOX</Link></li>
-                <li><Link to="/dragdrop">Drag Drop</Link></li>
+            <ul className="spec_left_txt">
+                <li><NavLink exact to="/">초고속 5G</NavLink></li>
+                <li><NavLink to="/battery">듀얼 배터리</NavLink></li>
+                <li><NavLink to="/saveArea">저장공간</NavLink></li>
+                <li><NavLink to="/ap">AP</NavLink></li> 
             </ul>
-            <div className="spec_right_img_group">
-                <Route path="/"><div className="spec_right_img"><img src="imgs/cont2_5.jpeg"></img></div></Route>
-                <Route path="/factory"><div className="spec_right_img"><img src="imgs/cont2_6.jpeg"></img></div></Route>
-                <Route path="/knox"><div className="spec_right_img"><img src="imgs/cont2_7.jpeg"></img></div></Route>
-                <Route path="/dragdrop"><div className="spec_right_img"><img src="imgs/cont2_8.jpeg"></img></div></Route>
-            </div>
-        </div> */}
+        </div>
+        <div className="spec_right_group">
+                <h2>좋아하던 플립에서 <br/> 열광하는 플립으로</h2>
+                <p>조금 다른 생각으로 만들어진 폰 같다구요?<br/>네, 맞아요. 바로 갤럭시 Z 플립3 5G.<br/>당신이 어떤 사람인지 세상에 선언해줄<br/>가장 강력한 스마트폰이 될 겁니다.</p>
+        </div>
+
      </div>
  );
 }
