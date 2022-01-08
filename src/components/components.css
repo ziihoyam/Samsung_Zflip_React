@@ -1,5 +1,25 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'appleGothic';
+    font-weight: 100;
+    src: url(../../public/font/AppleSDGothicNeoL.ttf);
+}
+@font-face {
+    font-family: 'appleGothicMedium';
+    font-weight: 300;
+    src: url(../../public/font/AppleSDGothicNeoM.ttf);
+}
+
+@font-face {
+    font-family: 'appleGothicBold';
+    font-weight: 500;
+    src: url(../../public/font/AppleSDGothicNeoB.ttf);
+}
+
+
 *{
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'appleGothic', 'Gothic A1', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -108,6 +128,7 @@ display: block;
 .phone_left .big_txt{
     font-size: 40px;
     font-weight: bold;
+    font-family: 'appleGothicMedium';
 }
 .phone_left p{
     margin-top: 10px;
@@ -175,7 +196,7 @@ display: block;
     width:150px;
     display: inline-block;
     text-align: right;
-    font-weight: 700;
+    font-family: 'appleGothicBold';
     font-size: 27px;
     color:blue;
 }
@@ -300,28 +321,74 @@ display: block;
 }
 .spec_right_group h2{
     font-size: 40px;
+    font-family: 'appleGothicMedium';
     margin-top: 100px;
 }
 .spec_right_group p{
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 300;
     margin-top:40px;
     line-height: 30px;
 }
 
 /* modal */
-.youtube_area{
+.modal_group{
+    z-index: 10;
+    outline: 5px solid red;
     display: block;
     margin:150px 0;
     width:100%;
+    height: 100%;
     text-align: center;
+    position:relative;
 }
 
-.modal_button{
+.modal_open{
+    all:unset;
     background-color: blue;
-    color:#fff;
-    padding:30px 70px;
+    color: #fff;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+.modal{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal_overlay{
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    position:absolute;
+}
+.modal_content {
+    position:relative;
+    background-color: #fff;
+    /* padding:50px 100px; */
+    /* overflow: hidden; */
     text-align: center;
+    position: fixed;
+    width:750px;
+    height: 421.875px;
+   
+}
+.hidden_modal{
+    display: none;
+}
+.x_button{
+    all:unset;
+    width:50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #fff;
+    position: absolute;
+    bottom:-70px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
 }
  /* footer */
 .footer{
