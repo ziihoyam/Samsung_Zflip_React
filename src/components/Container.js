@@ -118,7 +118,7 @@ function VideoModal() {
     return (
 
         <div className="modal_group">
-            <button className="modal_open" onClick={openModal}>Open modal</button>
+            <a className="modal_open" onClick={openModal}><img src="imgs/video_img-b.png" alt="video_img"></img></a>
             <div className="modal hidden_modal">
                 <div className="modal_overlay" onClick={hiddenModal}></div>
                 <div className="modal_content">
