@@ -123,7 +123,7 @@ function VideoModal() {
                 <div className="modal_overlay" onClick={hiddenModal}></div>
                 <div className="modal_content">
                     <div className="youtube_area">
-                        <iframe src="https://www.youtube.com/embed/w8SBlIAorH8?&amp;autoplay=1&amp;playlist=w8SBlIAorH8&amp;loop=1&amp;mute=1" width="750" height="421.875" frameborder="0" allowfullscreen=""> </iframe>
+                        <iframe src="https://www.youtube.com/embed/V6tji-FUPpw?&amp;autoplay=1&amp;playlist=w8SBlIAorH8&amp;loop=1&amp;mute=1" width="750" height="421.875" frameborder="0" allowfullscreen=""> </iframe>
                     </div>
                     <button className="x_button" onClick={hiddenModal}>✕</button>
                 </div>
