@@ -8,11 +8,11 @@ class Head extends Component{
                 <h1 id='logo'>
                     <a href="/"><img src="imgs/Galaxy_z_flip.png" alt="logo"></img></a>
                 </h1>
-                <ul class="sign">
+                <ul className="sign">
                     <li><a href='/'>로그인</a></li>
                     <li><a href='/'>회원가입</a></li>
                 </ul>
-                <ul class="gnb">
+                <ul className="gnb">
                     <li><a href="/">스펙</a></li>
                     <li><a href="/">메뉴얼</a></li>
                     <li><a href="/">유의사항</a></li>

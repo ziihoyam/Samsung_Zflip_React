@@ -5,6 +5,11 @@ import Head from './components/Head';
 import Container from './components/Container';
 import Footer from './components/Footer';
 
+document.cookie = "safeCookie1=foo; SameSite=Lax";
+document.cookie = "safeCookie2=foo";
+document.cookie = "crossCookie=bar; SameSite=None; Secure"
+
+
 class App extends Component {
   constructor(props){
     super(props);

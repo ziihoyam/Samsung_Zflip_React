@@ -3,6 +3,7 @@ import { Component } from "react";
 import './components.css';
 // import React, { useState } from "react";
 import { BrowserRouter, Route, NavLink } from "react-router-dom";
+import cont2_1 from "./img/cont2_1.jpeg"
 
 class Container extends Component {
     constructor(props) {
@@ -118,12 +119,12 @@ function VideoModal() {
     return (
 
         <div className="modal_group">
-            <a className="modal_open" onClick={openModal}><img src="imgs/video_img-b.png" alt="video_img"></img></a>
+            <a className="modal_open" onClick={openModal}><img src="../imgs/video_img-b.png" alt="video_img"></img></a>
             <div className="modal hidden_modal">
                 <div className="modal_overlay" onClick={hiddenModal}></div>
                 <div className="modal_content">
                     <div className="youtube_area">
-                        <iframe src="https://www.youtube.com/embed/V6tji-FUPpw?&amp;autoplay=1&amp;playlist=w8SBlIAorH8&amp;loop=1&amp;mute=1" width="750" height="421.875" frameborder="0" allowfullscreen=""> </iframe>
+                        {/* <iframe src="https://www.youtube.com/embed/V6tji-FUPpw?&amp;autoplay=1&amp;playlist=w8SBlIAorH8&amp;loop=1&amp;mute=1" title="youtube" width="750" height="421.875" frameborder="0" allowfullscreen=""> </iframe> */}
                     </div>
                     <button className="x_button" onClick={hiddenModal}>✕</button>
                 </div>
@@ -151,21 +152,21 @@ function Contents2() {
                         <div className="spec_left_img">
                             <h2>오래도록 파워풀한 배터리</h2>
                             <p>인텔리전트 듀얼 배터리 3,300 mAh 대용량 배터리를 경험해보세요.23,24 당신의 사용 습관에 맞춰 전력을 조절해주어 더 오래 사용할 수 있습니다.</p>
-                            <img src="imgs/cont2_2.jpeg" alt="route2"></img>
+                            <img src="./imgs/cont2_2.jpeg" alt="route2"></img>
                         </div>
                     </Route>
                     <Route path="/saveArea">
                         <div className="spec_left_img">
                             <h2>계속 모아 두세요</h2>
                             <p>폰으로 찍은 사진과 동영상은 폰으로 간직하세요. 최대 256 GB 저장 용량으로, 갤럭시 안의 공간은 충분합니다.</p>
-                            <img src="imgs/cont2_3.jpeg" alt="route3"></img>
+                            <img src="./imgs/cont2_3.jpeg" alt="route3"></img>
                         </div>
                     </Route>
                     <Route path="/ap">
                         <div className="spec_left_img">
                             <h2>갤럭시 Z 사상<br />가장 빠른 칩으로</h2>
                             <p>GPU, CPU 그리고 NPU로 업그레이드된 5 nm 프로세서를 탑재했습니다. 그리고 8 GB RAM까지 더해, 만족스러운 속도의 게임 퍼포먼스를 경험할 수 있죠.</p>
-                            <img src="imgs/cont2_4.jpeg" alt="route4"></img>
+                            <img src="./imgs/cont2_4.jpeg" alt="route4"></img>
                         </div>
                     </Route>
                 </div>
